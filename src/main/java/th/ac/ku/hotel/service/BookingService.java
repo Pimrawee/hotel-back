@@ -59,7 +59,7 @@ public class BookingService {
             record.setPrice(requestBody.getPrice());
         }
         if (requestBody.getStatus() == "Pending"){      //ถ้าลูกค้ากดจอง+กรอกหลักฐานการจ่ายเงิน
-            requestBody.setStatus("Paid");              //เปลี่ยนสถานะเป็น จ่ายเงินแล้ว
+            requestBody.setStatus("Completed");              //เปลี่ยนสถานะเป็น จ่ายเงินแล้ว
             record.setStatus(requestBody.getStatus());
         }
 //        else if (requestBody.getStatus() == "Paid"){    //ถ้าแอดมินเข้ามากดยืนยันการจองให้
