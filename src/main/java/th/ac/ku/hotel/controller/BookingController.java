@@ -24,12 +24,12 @@ public class BookingController {
         return bookingService.create(booking);
     }
 
-    @GetMapping("/(id)")
+    @GetMapping("/{id}")
     public Booking getBooking(@PathVariable UUID id){
         return bookingService.getBooking(id);
     }
 
-    @PutMapping("/(id)")
+    @PutMapping("/{id}")
     public Booking update(@PathVariable UUID id, @RequestBody Booking booking){
         return bookingService.update(id, booking);
     }

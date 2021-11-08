@@ -70,7 +70,7 @@ public class BookingService {
         if (requestBody.getRefCode() != null){
             record.setRefCode(requestBody.getRefCode());
         }
-        if (requestBody.getStatus() == "Pending"){      //ถ้าลูกค้ากดจอง+กรอกหลักฐานการจ่ายเงิน
+        if (requestBody.getStatus().equals("Pending")){      //ถ้าลูกค้ากดจอง+กรอกหลักฐานการจ่ายเงิน
             requestBody.setStatus("Completed");              //เปลี่ยนสถานะเป็น จ่ายเงินแล้ว
             record.setStatus(requestBody.getStatus());
         }
