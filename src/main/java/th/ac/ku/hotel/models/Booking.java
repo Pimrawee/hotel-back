@@ -27,6 +27,9 @@ public class Booking {
     private LocalDate checkin;  //วันที่เข้าพัก
     private LocalDate checkout; //วันที่กลับ
     private float price;        //ราคาที่ลูกค้าต้องจ่าย
+    private String hour;        //ชั่วโมงที่จ่ายเงิน
+    private String minute;      //นาทีที่จ่ายเงิน
+    private String refCode;     //รหัสการจ่ายเงิน
     private String status = "Pending";      //สถานะการจ่ายเงิน
 
     public UUID getId() {
@@ -115,6 +118,30 @@ public class Booking {
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    public String getHour() {
+        return hour;
+    }
+
+    public void setHour(String hour) {
+        this.hour = hour;
+    }
+
+    public String getMinute() {
+        return minute;
+    }
+
+    public void setMinute(String minute) {
+        this.minute = minute;
+    }
+
+    public String getRefCode() {
+        return refCode;
+    }
+
+    public void setRefCode(String refCode) {
+        this.refCode = refCode;
     }
 
     public String getStatus() {

@@ -58,14 +58,19 @@ public class BookingService {
         if (requestBody.getPrice() > 0){
             record.setPrice(requestBody.getPrice());
         }
+        if (requestBody.getHour() != null){
+            record.setHour(requestBody.getHour());
+        }
+        if (requestBody.getMinute() != null){
+            record.setMinute(requestBody.getMinute());
+        }
+        if (requestBody.getRefCode() != null){
+            record.setRoomType(requestBody.getRefCode());
+        }
         if (requestBody.getStatus() == "Pending"){      //ถ้าลูกค้ากดจอง+กรอกหลักฐานการจ่ายเงิน
             requestBody.setStatus("Completed");              //เปลี่ยนสถานะเป็น จ่ายเงินแล้ว
             record.setStatus(requestBody.getStatus());
         }
-//        else if (requestBody.getStatus() == "Paid"){    //ถ้าแอดมินเข้ามากดยืนยันการจองให้
-//            requestBody.setStatus("Completed");         //เปลี่ยนสถานะเป็น จองสำเร็จ
-//            record.setStatus(requestBody.getStatus());
-//        }
 
         Booking b = bookingRepository.save(record);
 
