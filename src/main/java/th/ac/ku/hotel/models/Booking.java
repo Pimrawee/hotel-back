@@ -27,6 +27,7 @@ public class Booking {
     private LocalDate checkin;  //วันที่เข้าพัก
     private LocalDate checkout; //วันที่กลับ
     private float price;        //ราคาที่ลูกค้าต้องจ่าย
+    private String date;        //วันที่จ่ายเงิน
     private String hour;        //ชั่วโมงที่จ่ายเงิน
     private String minute;      //นาทีที่จ่ายเงิน
     private String refCode;     //รหัสการจ่ายเงิน
@@ -118,6 +119,14 @@ public class Booking {
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getHour() {

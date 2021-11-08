@@ -58,6 +58,9 @@ public class BookingService {
         if (requestBody.getPrice() > 0){
             record.setPrice(requestBody.getPrice());
         }
+        if (requestBody.getDate() != null){
+            record.setDate(requestBody.getDate());
+        }
         if (requestBody.getHour() != null){
             record.setHour(requestBody.getHour());
         }
