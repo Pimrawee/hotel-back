@@ -65,7 +65,7 @@ public class BookingService {
             record.setMinute(requestBody.getMinute());
         }
         if (requestBody.getRefCode() != null){
-            record.setRoomType(requestBody.getRefCode());
+            record.setRefCode(requestBody.getRefCode());
         }
         if (requestBody.getStatus() == "Pending"){      //ถ้าลูกค้ากดจอง+กรอกหลักฐานการจ่ายเงิน
             requestBody.setStatus("Completed");              //เปลี่ยนสถานะเป็น จ่ายเงินแล้ว
